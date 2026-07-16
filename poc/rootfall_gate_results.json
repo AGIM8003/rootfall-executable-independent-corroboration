@@ -1,0 +1,200 @@
+{
+  "framework": "ROOTFALL",
+  "gate": "REALITY_GATE",
+  "spec_version": "PUBLICATION_HARDENING_PROTOCOL",
+  "blueprint_version": "2.0.0",
+  "python_version": "3.14.4",
+  "timestamp": "2026-07-16T17:56:49.290905+00:00",
+  "run_count": 3,
+  "author": "Agim Haxhijaha",
+  "orcid": "0009-0002-3234-7765",
+  "disclaimer": "PoC Reality Gate demonstrator only — not production, not peer reviewed, not formal verification",
+  "timestamp_utc": "2026-07-16T17:56:49.290906+00:00",
+  "total_gate_execution_seconds": 0.002021,
+  "tests": [
+    {
+      "name": "scale_10_paths_50_evidence_20_roots",
+      "passed": true,
+      "timing_ms": 0.238,
+      "details": {
+        "paths": 10,
+        "evidence_artifacts": 50,
+        "roots": 22
+      },
+      "error": ""
+    },
+    {
+      "name": "graduated_ablation_degrades_predictably",
+      "passed": true,
+      "timing_ms": 0.603,
+      "details": {
+        "steps": 10,
+        "series_sample": [
+          {
+            "step": 1,
+            "ablated_root": "R00",
+            "corroboration_before": 10,
+            "corroboration_after": 9,
+            "independence_before": 1.0,
+            "independence_after": 1.0,
+            "delta_corroboration": 1
+          },
+          {
+            "step": 2,
+            "ablated_root": "R02",
+            "corroboration_before": 9,
+            "corroboration_after": 8,
+            "independence_before": 1.0,
+            "independence_after": 1.0,
+            "delta_corroboration": 1
+          },
+          {
+            "step": 3,
+            "ablated_root": "R04",
+            "corroboration_before": 8,
+            "corroboration_after": 7,
+            "independence_before": 1.0,
+            "independence_after": 1.0,
+            "delta_corroboration": 1
+          }
+        ]
+      },
+      "error": ""
+    },
+    {
+      "name": "subtle_false_plurality_4_levels_deep",
+      "passed": true,
+      "timing_ms": 0.167,
+      "details": {
+        "deep_shared_findings": [
+          {
+            "path_a": "DEEP_PATH_0",
+            "path_b": "DEEP_PATH_1",
+            "shared_deep_roots": [
+              "R_HIDDEN"
+            ],
+            "min_depth": 4
+          },
+          {
+            "path_a": "DEEP_PATH_0",
+            "path_b": "DEEP_PATH_2",
+            "shared_deep_roots": [
+              "R_HIDDEN"
+            ],
+            "min_depth": 4
+          },
+          {
+            "path_a": "DEEP_PATH_1",
+            "path_b": "DEEP_PATH_2",
+            "shared_deep_roots": [
+              "R_HIDDEN"
+            ],
+            "min_depth": 4
+          }
+        ],
+        "verdict": "FAIL",
+        "false_plurality": true
+      },
+      "error": ""
+    },
+    {
+      "name": "adversarial_rename_paraphrase_launder",
+      "passed": true,
+      "timing_ms": 0.097,
+      "details": {
+        "laundered": [
+          {
+            "laundered_id": "R_renamed",
+            "canonical_id": "R_original",
+            "fingerprint": "b5037d7562d72a40",
+            "method": "rename_exact_fingerprint"
+          },
+          {
+            "laundered_id": "R_paraphrase",
+            "canonical_id": "R_original",
+            "fingerprint": "bbef3304f7bb8f37",
+            "method": "canonical_id_cluster"
+          },
+          {
+            "laundered_id": "R_renamed",
+            "canonical_id": "R_paraphrase",
+            "fingerprint": "b5037d7562d72a40",
+            "method": "paraphrase_jaccard",
+            "jaccard": 1.0
+          }
+        ],
+        "verdict": "FAIL"
+      },
+      "error": ""
+    },
+    {
+      "name": "certificate_tamper_integrity_fails",
+      "passed": true,
+      "timing_ms": 0.102,
+      "details": {
+        "original_valid": true,
+        "tampered_valid": false
+      },
+      "error": ""
+    },
+    {
+      "name": "multi_decision_5_simultaneous_isolation",
+      "passed": true,
+      "timing_ms": 0.284,
+      "details": {
+        "decisions": 5,
+        "all_pass": true,
+        "cross_tamper_blocked": true
+      },
+      "error": ""
+    },
+    {
+      "name": "adversarial_demonstrations_all_blocked",
+      "passed": true,
+      "timing_ms": 0.479,
+      "details": {
+        "demonstrations": [
+          {
+            "demonstration": "evidence_fabrication_blocked",
+            "fabricated_root": "R_FAKE",
+            "blocked": true,
+            "verdict": "PASS",
+            "detail": "Fabricated root does not increase certified independence"
+          },
+          {
+            "demonstration": "root_laundering_detected",
+            "laundered_pairs": 3,
+            "detected": true,
+            "verdict": "FAIL"
+          },
+          {
+            "demonstration": "corroboration_inflation_caught",
+            "original_count": 3,
+            "inflated_count": 8,
+            "caught": true,
+            "verdict": "FAIL"
+          },
+          {
+            "demonstration": "certificate_forgery_fails",
+            "integrity_valid": false,
+            "gateway_permitted": false,
+            "blocked": true
+          },
+          {
+            "demonstration": "ablation_evasion_fails",
+            "deep_shared_found": 3,
+            "evasion_fails": true,
+            "verdict": "FAIL"
+          }
+        ]
+      },
+      "error": ""
+    }
+  ],
+  "summary": {
+    "total": 7,
+    "passed": 7,
+    "failed": 0
+  },
+  "GATE_VERDICT": "PASS"
+}

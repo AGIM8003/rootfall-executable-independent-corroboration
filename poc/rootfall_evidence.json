@@ -1,0 +1,134 @@
+{
+  "framework": "ROOTFALL",
+  "author": "Agim Haxhijaha",
+  "orcid": "0009-0002-3234-7765",
+  "disclaimer": "PoC only — not production, not peer reviewed",
+  "timestamp_utc": "2026-07-16T17:56:49.550207+00:00",
+  "scenarios": {
+    "pass_case": {
+      "certificate_type": "ROOTFALL",
+      "scenario_id": "PASS_independent_corroboration",
+      "decision": "System is safe to operate",
+      "corroboration_count": 3,
+      "independence_score": 1.0,
+      "hidden_shared_roots": [],
+      "ablation_results": [
+        {
+          "ablated_root": "R1_sensor_array",
+          "affected_paths": [
+            "PATH_A"
+          ],
+          "surviving_paths": [
+            "PATH_B",
+            "PATH_C"
+          ],
+          "decision_survives": true,
+          "surviving_independence": 1.0,
+          "remaining_corroboration": 2
+        },
+        {
+          "ablated_root": "R2_manual_inspection",
+          "affected_paths": [
+            "PATH_B"
+          ],
+          "surviving_paths": [
+            "PATH_A",
+            "PATH_C"
+          ],
+          "decision_survives": true,
+          "surviving_independence": 1.0,
+          "remaining_corroboration": 2
+        },
+        {
+          "ablated_root": "R3_satellite_telemetry",
+          "affected_paths": [
+            "PATH_C"
+          ],
+          "surviving_paths": [
+            "PATH_A",
+            "PATH_B"
+          ],
+          "decision_survives": true,
+          "surviving_independence": 1.0,
+          "remaining_corroboration": 2
+        }
+      ],
+      "min_survivors_after_ablation": 2,
+      "all_decisions_survive_ablation": true,
+      "false_plurality_detected": false,
+      "verdict": "PASS",
+      "verdict_reason": "Truly independent corroboration: ablation of any single root leaves >= 2 independent surviving paths"
+    },
+    "fail_case": {
+      "certificate_type": "ROOTFALL",
+      "scenario_id": "FAIL_false_plurality",
+      "decision": "Drug compound X is effective",
+      "corroboration_count": 3,
+      "independence_score": 0.6667,
+      "hidden_shared_roots": [
+        {
+          "root_id": "R_SHARED_database",
+          "shared_by_paths": [
+            "PATH_ALPHA",
+            "PATH_BETA"
+          ],
+          "root_description": "Central clinical trial database (single source)"
+        }
+      ],
+      "ablation_results": [
+        {
+          "ablated_root": "R2_lab_assay",
+          "affected_paths": [
+            "PATH_BETA"
+          ],
+          "surviving_paths": [
+            "PATH_ALPHA",
+            "PATH_GAMMA"
+          ],
+          "decision_survives": true,
+          "surviving_independence": 1.0,
+          "remaining_corroboration": 2
+        },
+        {
+          "ablated_root": "R3_peer_review",
+          "affected_paths": [
+            "PATH_GAMMA"
+          ],
+          "surviving_paths": [
+            "PATH_ALPHA",
+            "PATH_BETA"
+          ],
+          "decision_survives": true,
+          "surviving_independence": 0.0,
+          "remaining_corroboration": 2
+        },
+        {
+          "ablated_root": "R_SHARED_database",
+          "affected_paths": [
+            "PATH_ALPHA",
+            "PATH_BETA"
+          ],
+          "surviving_paths": [
+            "PATH_GAMMA"
+          ],
+          "decision_survives": true,
+          "surviving_independence": 0.0,
+          "remaining_corroboration": 1
+        }
+      ],
+      "min_survivors_after_ablation": 1,
+      "all_decisions_survive_ablation": true,
+      "false_plurality_detected": true,
+      "verdict": "FAIL",
+      "verdict_reason": "False plurality detected: paths share hidden common root(s)"
+    }
+  },
+  "summary": {
+    "pass_verdict": "PASS",
+    "fail_verdict": "FAIL",
+    "pass_independence": 1.0,
+    "fail_independence": 0.6667,
+    "false_plurality_exposed": true,
+    "demonstration_success": true
+  }
+}

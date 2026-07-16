@@ -1,0 +1,82 @@
+{
+  "framework": "ROOTFALL",
+  "author": "Agim Haxhijaha",
+  "orcid": "0009-0002-3234-7765",
+  "disclaimer": "PoC replication evidence only \u2014 not production",
+  "timestamp_utc": "2026-07-16T17:56:49.115866+00:00",
+  "primary_style": "graph_path_ablation",
+  "alternative_style": "set_theoretic_generating_sets",
+  "pass_case": {
+    "decision": "SAFE_TO_OPERATE",
+    "corroboration_count": 3,
+    "independence_score": 1.0,
+    "false_plurality_detected": false,
+    "ablation": [
+      {
+        "root": "R_inspect",
+        "before": 3,
+        "after": 2,
+        "delta": 1
+      },
+      {
+        "root": "R_sat",
+        "before": 3,
+        "after": 2,
+        "delta": 1
+      },
+      {
+        "root": "R_sensor",
+        "before": 3,
+        "after": 2,
+        "delta": 1
+      }
+    ],
+    "verdict": "PASS"
+  },
+  "fail_case": {
+    "decision": "APPROVE_TRADE",
+    "corroboration_count": 3,
+    "independence_score": 0.0,
+    "false_plurality_detected": true,
+    "ablation": [
+      {
+        "root": "R_SHARED",
+        "before": 3,
+        "after": 0,
+        "delta": 3
+      },
+      {
+        "root": "R_a",
+        "before": 3,
+        "after": 2,
+        "delta": 1
+      },
+      {
+        "root": "R_b",
+        "before": 3,
+        "after": 2,
+        "delta": 1
+      },
+      {
+        "root": "R_c",
+        "before": 3,
+        "after": 2,
+        "delta": 1
+      }
+    ],
+    "verdict": "FAIL"
+  },
+  "reference": {
+    "pass": {
+      "verdict": "PASS",
+      "independence_score": 1.0,
+      "false_plurality_detected": false
+    },
+    "fail": {
+      "verdict": "FAIL",
+      "independence_score": 0.0,
+      "false_plurality_detected": true
+    }
+  },
+  "replication_pass": true
+}

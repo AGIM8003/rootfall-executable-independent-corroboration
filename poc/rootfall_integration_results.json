@@ -1,0 +1,31 @@
+{
+  "framework": "ROOTFALL",
+  "generated_at": "2026-07-16T17:56:49.444401+00:00",
+  "results": [
+    {
+      "name": "empty_input",
+      "pass": true
+    },
+    {
+      "name": "single_path",
+      "pass": true
+    },
+    {
+      "name": "typical_false_plurality",
+      "pass": true
+    },
+    {
+      "name": "large_scale_100_paths",
+      "pass": true
+    },
+    {
+      "name": "error_handling",
+      "pass": true
+    },
+    {
+      "name": "genuinely_independent",
+      "pass": true
+    }
+  ],
+  "pass": true
+}

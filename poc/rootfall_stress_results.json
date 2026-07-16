@@ -1,0 +1,215 @@
+{
+  "framework": "ROOTFALL",
+  "script": "rootfall_stress.py",
+  "author": "Agim Haxhijaha",
+  "orcid": "0009-0002-3234-7765",
+  "generated_at": "2026-07-16T17:56:50.081972+00:00",
+  "base_target": {
+    "paths": 100,
+    "evidence_items": 500,
+    "roots": 50
+  },
+  "scalability_curve": [
+    {
+      "scale": {
+        "paths": 100,
+        "evidence_items": 500,
+        "roots": 50
+      },
+      "timing_s": {
+        "build": 0.002529,
+        "independence_and_hidden": 0.002077,
+        "ablation_battery": 0.000528,
+        "certificate": 0.00016,
+        "total": 0.005437,
+        "per_root_ablation_ms": 0.010556
+      },
+      "memory": {
+        "current_bytes": 275242,
+        "peak_bytes": 282618,
+        "peak_mb": 0.2695
+      },
+      "results": {
+        "independence_score": 0.9212,
+        "hidden_shared_roots": 50,
+        "ablation_runs": 50,
+        "verdict": "FAIL"
+      },
+      "multiplier": 1
+    },
+    {
+      "scale": {
+        "paths": 200,
+        "evidence_items": 1000,
+        "roots": 100
+      },
+      "timing_s": {
+        "build": 0.005045,
+        "independence_and_hidden": 0.007106,
+        "ablation_battery": 0.00183,
+        "certificate": 0.000311,
+        "total": 0.014562,
+        "per_root_ablation_ms": 0.0183
+      },
+      "memory": {
+        "current_bytes": 598560,
+        "peak_bytes": 618008,
+        "peak_mb": 0.5894
+      },
+      "results": {
+        "independence_score": 0.9407,
+        "hidden_shared_roots": 100,
+        "ablation_runs": 100,
+        "verdict": "FAIL"
+      },
+      "multiplier": 2
+    },
+    {
+      "scale": {
+        "paths": 500,
+        "evidence_items": 2500,
+        "roots": 250
+      },
+      "timing_s": {
+        "build": 0.012432,
+        "independence_and_hidden": 0.04586,
+        "ablation_battery": 0.008916,
+        "certificate": 0.000877,
+        "total": 0.06867,
+        "per_root_ablation_ms": 0.035666
+      },
+      "memory": {
+        "current_bytes": 2153732,
+        "peak_bytes": 2219004,
+        "peak_mb": 2.1162
+      },
+      "results": {
+        "independence_score": 0.9523,
+        "hidden_shared_roots": 250,
+        "ablation_runs": 250,
+        "verdict": "FAIL"
+      },
+      "multiplier": 5
+    },
+    {
+      "scale": {
+        "paths": 1000,
+        "evidence_items": 5000,
+        "roots": 500
+      },
+      "timing_s": {
+        "build": 0.026259,
+        "independence_and_hidden": 0.179646,
+        "ablation_battery": 0.031865,
+        "certificate": 0.001739,
+        "total": 0.240732,
+        "per_root_ablation_ms": 0.063731
+      },
+      "memory": {
+        "current_bytes": 6642693,
+        "peak_bytes": 6777957,
+        "peak_mb": 6.464
+      },
+      "results": {
+        "independence_score": 0.9562,
+        "hidden_shared_roots": 500,
+        "ablation_runs": 500,
+        "verdict": "FAIL"
+      },
+      "multiplier": 10
+    }
+  ],
+  "bottleneck_operation": "build",
+  "bottleneck_rationale": "Pairwise independence / ablation battery scales with paths\u00d7roots; dominant op at 1\u00d7 is 'build'.",
+  "growth_by_operation": {
+    "build": [
+      {
+        "multiplier": 1,
+        "seconds": 0.002529,
+        "vs_1x": 1.0
+      },
+      {
+        "multiplier": 2,
+        "seconds": 0.005045,
+        "vs_1x": 1.995
+      },
+      {
+        "multiplier": 5,
+        "seconds": 0.012432,
+        "vs_1x": 4.916
+      },
+      {
+        "multiplier": 10,
+        "seconds": 0.026259,
+        "vs_1x": 10.383
+      }
+    ],
+    "independence_and_hidden": [
+      {
+        "multiplier": 1,
+        "seconds": 0.002077,
+        "vs_1x": 1.0
+      },
+      {
+        "multiplier": 2,
+        "seconds": 0.007106,
+        "vs_1x": 3.421
+      },
+      {
+        "multiplier": 5,
+        "seconds": 0.04586,
+        "vs_1x": 22.08
+      },
+      {
+        "multiplier": 10,
+        "seconds": 0.179646,
+        "vs_1x": 86.493
+      }
+    ],
+    "ablation_battery": [
+      {
+        "multiplier": 1,
+        "seconds": 0.000528,
+        "vs_1x": 1.0
+      },
+      {
+        "multiplier": 2,
+        "seconds": 0.00183,
+        "vs_1x": 3.466
+      },
+      {
+        "multiplier": 5,
+        "seconds": 0.008916,
+        "vs_1x": 16.886
+      },
+      {
+        "multiplier": 10,
+        "seconds": 0.031865,
+        "vs_1x": 60.35
+      }
+    ],
+    "certificate": [
+      {
+        "multiplier": 1,
+        "seconds": 0.00016,
+        "vs_1x": 1.0
+      },
+      {
+        "multiplier": 2,
+        "seconds": 0.000311,
+        "vs_1x": 1.944
+      },
+      {
+        "multiplier": 5,
+        "seconds": 0.000877,
+        "vs_1x": 5.481
+      },
+      {
+        "multiplier": 10,
+        "seconds": 0.001739,
+        "vs_1x": 10.869
+      }
+    ]
+  },
+  "pass": true
+}

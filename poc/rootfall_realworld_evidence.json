@@ -1,0 +1,1031 @@
+{
+  "framework": "ROOTFALL",
+  "script": "rootfall_realworld.py",
+  "author": "Agim Haxhijaha",
+  "orcid": "0009-0002-3234-7765",
+  "generated_at": "2026-07-16T17:56:49.666060+00:00",
+  "scenario": {
+    "incident_class": "credit_rating_false_plurality",
+    "decision": "UPGRADE_ISSUER_XYZ_TO_BBB_PLUS",
+    "path_count": 19,
+    "root_count": 50,
+    "evidence_item_scale": 50,
+    "why_realistic": "Investment committees routinely treat separately authored desk notes as independent even when they consume the same vendor terminal feed and the same commercial scorecard."
+  },
+  "metrics": {
+    "independence_score": 0.386,
+    "hidden_shared_roots": [
+      {
+        "root_id": "ROOT_VENDOR_PRICING_FEED_X",
+        "shared_by_paths": [
+          "PATH_VENDOR_LOOKALIKE_01",
+          "PATH_VENDOR_LOOKALIKE_02",
+          "PATH_VENDOR_LOOKALIKE_03",
+          "PATH_VENDOR_LOOKALIKE_04",
+          "PATH_VENDOR_LOOKALIKE_05",
+          "PATH_VENDOR_LOOKALIKE_06",
+          "PATH_VENDOR_LOOKALIKE_07",
+          "PATH_VENDOR_LOOKALIKE_08",
+          "PATH_VENDOR_LOOKALIKE_09",
+          "PATH_VENDOR_LOOKALIKE_10",
+          "PATH_MODEL_LOOKALIKE_01",
+          "PATH_MODEL_LOOKALIKE_02",
+          "PATH_MODEL_LOOKALIKE_03",
+          "PATH_MODEL_LOOKALIKE_04",
+          "PATH_MODEL_LOOKALIKE_05"
+        ],
+        "root_description": "Third-party CDS/bond pricing feed X (licensed terminal)"
+      },
+      {
+        "root_id": "ROOT_VENDOR_MODEL_CM_7",
+        "shared_by_paths": [
+          "PATH_VENDOR_LOOKALIKE_01",
+          "PATH_VENDOR_LOOKALIKE_02",
+          "PATH_VENDOR_LOOKALIKE_03",
+          "PATH_VENDOR_LOOKALIKE_04",
+          "PATH_VENDOR_LOOKALIKE_05",
+          "PATH_VENDOR_LOOKALIKE_06",
+          "PATH_VENDOR_LOOKALIKE_07",
+          "PATH_VENDOR_LOOKALIKE_08",
+          "PATH_VENDOR_LOOKALIKE_09",
+          "PATH_VENDOR_LOOKALIKE_10",
+          "PATH_MODEL_LOOKALIKE_01",
+          "PATH_MODEL_LOOKALIKE_02",
+          "PATH_MODEL_LOOKALIKE_03",
+          "PATH_MODEL_LOOKALIKE_04",
+          "PATH_MODEL_LOOKALIKE_05"
+        ],
+        "root_description": "Commercial credit model CM-7 scorecard (same calibration)"
+      }
+    ],
+    "certificate_verdict": "FAIL",
+    "certificate": {
+      "certificate_type": "ROOTFALL",
+      "scenario_id": "RW_CREDIT_COMMITTEE_FALSE_PLURALITY",
+      "decision": "UPGRADE_ISSUER_XYZ_TO_BBB_PLUS",
+      "corroboration_count": 19,
+      "independence_score": 0.386,
+      "hidden_shared_roots": [
+        {
+          "root_id": "ROOT_VENDOR_PRICING_FEED_X",
+          "shared_by_paths": [
+            "PATH_VENDOR_LOOKALIKE_01",
+            "PATH_VENDOR_LOOKALIKE_02",
+            "PATH_VENDOR_LOOKALIKE_03",
+            "PATH_VENDOR_LOOKALIKE_04",
+            "PATH_VENDOR_LOOKALIKE_05",
+            "PATH_VENDOR_LOOKALIKE_06",
+            "PATH_VENDOR_LOOKALIKE_07",
+            "PATH_VENDOR_LOOKALIKE_08",
+            "PATH_VENDOR_LOOKALIKE_09",
+            "PATH_VENDOR_LOOKALIKE_10",
+            "PATH_MODEL_LOOKALIKE_01",
+            "PATH_MODEL_LOOKALIKE_02",
+            "PATH_MODEL_LOOKALIKE_03",
+            "PATH_MODEL_LOOKALIKE_04",
+            "PATH_MODEL_LOOKALIKE_05"
+          ],
+          "root_description": "Third-party CDS/bond pricing feed X (licensed terminal)"
+        },
+        {
+          "root_id": "ROOT_VENDOR_MODEL_CM_7",
+          "shared_by_paths": [
+            "PATH_VENDOR_LOOKALIKE_01",
+            "PATH_VENDOR_LOOKALIKE_02",
+            "PATH_VENDOR_LOOKALIKE_03",
+            "PATH_VENDOR_LOOKALIKE_04",
+            "PATH_VENDOR_LOOKALIKE_05",
+            "PATH_VENDOR_LOOKALIKE_06",
+            "PATH_VENDOR_LOOKALIKE_07",
+            "PATH_VENDOR_LOOKALIKE_08",
+            "PATH_VENDOR_LOOKALIKE_09",
+            "PATH_VENDOR_LOOKALIKE_10",
+            "PATH_MODEL_LOOKALIKE_01",
+            "PATH_MODEL_LOOKALIKE_02",
+            "PATH_MODEL_LOOKALIKE_03",
+            "PATH_MODEL_LOOKALIKE_04",
+            "PATH_MODEL_LOOKALIKE_05"
+          ],
+          "root_description": "Commercial credit model CM-7 scorecard (same calibration)"
+        }
+      ],
+      "ablation_results": [
+        {
+          "ablated_root": "ROOT_AUDITOR_COMFORT",
+          "affected_paths": [
+            "PATH_TRUE_FILING"
+          ],
+          "surviving_paths": [
+            "PATH_VENDOR_LOOKALIKE_01",
+            "PATH_VENDOR_LOOKALIKE_02",
+            "PATH_VENDOR_LOOKALIKE_03",
+            "PATH_VENDOR_LOOKALIKE_04",
+            "PATH_VENDOR_LOOKALIKE_05",
+            "PATH_VENDOR_LOOKALIKE_06",
+            "PATH_VENDOR_LOOKALIKE_07",
+            "PATH_VENDOR_LOOKALIKE_08",
+            "PATH_VENDOR_LOOKALIKE_09",
+            "PATH_VENDOR_LOOKALIKE_10",
+            "PATH_MODEL_LOOKALIKE_01",
+            "PATH_MODEL_LOOKALIKE_02",
+            "PATH_MODEL_LOOKALIKE_03",
+            "PATH_MODEL_LOOKALIKE_04",
+            "PATH_MODEL_LOOKALIKE_05",
+            "PATH_TRUE_BANK",
+            "PATH_TRUE_OPS",
+            "PATH_TRUE_WHISTLE_CONTRA"
+          ],
+          "decision_survives": true,
+          "surviving_independence": 0.3137,
+          "remaining_corroboration": 18
+        },
+        {
+          "ablated_root": "ROOT_BANK_SYNDICATE_NOTE",
+          "affected_paths": [
+            "PATH_TRUE_BANK"
+          ],
+          "surviving_paths": [
+            "PATH_VENDOR_LOOKALIKE_01",
+            "PATH_VENDOR_LOOKALIKE_02",
+            "PATH_VENDOR_LOOKALIKE_03",
+            "PATH_VENDOR_LOOKALIKE_04",
+            "PATH_VENDOR_LOOKALIKE_05",
+            "PATH_VENDOR_LOOKALIKE_06",
+            "PATH_VENDOR_LOOKALIKE_07",
+            "PATH_VENDOR_LOOKALIKE_08",
+            "PATH_VENDOR_LOOKALIKE_09",
+            "PATH_VENDOR_LOOKALIKE_10",
+            "PATH_MODEL_LOOKALIKE_01",
+            "PATH_MODEL_LOOKALIKE_02",
+            "PATH_MODEL_LOOKALIKE_03",
+            "PATH_MODEL_LOOKALIKE_04",
+            "PATH_MODEL_LOOKALIKE_05",
+            "PATH_TRUE_FILING",
+            "PATH_TRUE_OPS",
+            "PATH_TRUE_WHISTLE_CONTRA"
+          ],
+          "decision_survives": true,
+          "surviving_independence": 0.3137,
+          "remaining_corroboration": 18
+        },
+        {
+          "ablated_root": "ROOT_CUSTOMER_CONCENTRATION",
+          "affected_paths": [
+            "PATH_TRUE_BANK"
+          ],
+          "surviving_paths": [
+            "PATH_VENDOR_LOOKALIKE_01",
+            "PATH_VENDOR_LOOKALIKE_02",
+            "PATH_VENDOR_LOOKALIKE_03",
+            "PATH_VENDOR_LOOKALIKE_04",
+            "PATH_VENDOR_LOOKALIKE_05",
+            "PATH_VENDOR_LOOKALIKE_06",
+            "PATH_VENDOR_LOOKALIKE_07",
+            "PATH_VENDOR_LOOKALIKE_08",
+            "PATH_VENDOR_LOOKALIKE_09",
+            "PATH_VENDOR_LOOKALIKE_10",
+            "PATH_MODEL_LOOKALIKE_01",
+            "PATH_MODEL_LOOKALIKE_02",
+            "PATH_MODEL_LOOKALIKE_03",
+            "PATH_MODEL_LOOKALIKE_04",
+            "PATH_MODEL_LOOKALIKE_05",
+            "PATH_TRUE_FILING",
+            "PATH_TRUE_OPS",
+            "PATH_TRUE_WHISTLE_CONTRA"
+          ],
+          "decision_survives": true,
+          "surviving_independence": 0.3137,
+          "remaining_corroboration": 18
+        },
+        {
+          "ablated_root": "ROOT_INSIDER_WHISTLE",
+          "affected_paths": [
+            "PATH_TRUE_WHISTLE_CONTRA"
+          ],
+          "surviving_paths": [
+            "PATH_VENDOR_LOOKALIKE_01",
+            "PATH_VENDOR_LOOKALIKE_02",
+            "PATH_VENDOR_LOOKALIKE_03",
+            "PATH_VENDOR_LOOKALIKE_04",
+            "PATH_VENDOR_LOOKALIKE_05",
+            "PATH_VENDOR_LOOKALIKE_06",
+            "PATH_VENDOR_LOOKALIKE_07",
+            "PATH_VENDOR_LOOKALIKE_08",
+            "PATH_VENDOR_LOOKALIKE_09",
+            "PATH_VENDOR_LOOKALIKE_10",
+            "PATH_MODEL_LOOKALIKE_01",
+            "PATH_MODEL_LOOKALIKE_02",
+            "PATH_MODEL_LOOKALIKE_03",
+            "PATH_MODEL_LOOKALIKE_04",
+            "PATH_MODEL_LOOKALIKE_05",
+            "PATH_TRUE_FILING",
+            "PATH_TRUE_BANK",
+            "PATH_TRUE_OPS"
+          ],
+          "decision_survives": true,
+          "surviving_independence": 0.3137,
+          "remaining_corroboration": 18
+        },
+        {
+          "ablated_root": "ROOT_ISSUER_10K",
+          "affected_paths": [
+            "PATH_TRUE_FILING"
+          ],
+          "surviving_paths": [
+            "PATH_VENDOR_LOOKALIKE_01",
+            "PATH_VENDOR_LOOKALIKE_02",
+            "PATH_VENDOR_LOOKALIKE_03",
+            "PATH_VENDOR_LOOKALIKE_04",
+            "PATH_VENDOR_LOOKALIKE_05",
+            "PATH_VENDOR_LOOKALIKE_06",
+            "PATH_VENDOR_LOOKALIKE_07",
+            "PATH_VENDOR_LOOKALIKE_08",
+            "PATH_VENDOR_LOOKALIKE_09",
+            "PATH_VENDOR_LOOKALIKE_10",
+            "PATH_MODEL_LOOKALIKE_01",
+            "PATH_MODEL_LOOKALIKE_02",
+            "PATH_MODEL_LOOKALIKE_03",
+            "PATH_MODEL_LOOKALIKE_04",
+            "PATH_MODEL_LOOKALIKE_05",
+            "PATH_TRUE_BANK",
+            "PATH_TRUE_OPS",
+            "PATH_TRUE_WHISTLE_CONTRA"
+          ],
+          "decision_survives": true,
+          "surviving_independence": 0.3137,
+          "remaining_corroboration": 18
+        },
+        {
+          "ablated_root": "ROOT_REGULATOR_FILING",
+          "affected_paths": [
+            "PATH_TRUE_FILING"
+          ],
+          "surviving_paths": [
+            "PATH_VENDOR_LOOKALIKE_01",
+            "PATH_VENDOR_LOOKALIKE_02",
+            "PATH_VENDOR_LOOKALIKE_03",
+            "PATH_VENDOR_LOOKALIKE_04",
+            "PATH_VENDOR_LOOKALIKE_05",
+            "PATH_VENDOR_LOOKALIKE_06",
+            "PATH_VENDOR_LOOKALIKE_07",
+            "PATH_VENDOR_LOOKALIKE_08",
+            "PATH_VENDOR_LOOKALIKE_09",
+            "PATH_VENDOR_LOOKALIKE_10",
+            "PATH_MODEL_LOOKALIKE_01",
+            "PATH_MODEL_LOOKALIKE_02",
+            "PATH_MODEL_LOOKALIKE_03",
+            "PATH_MODEL_LOOKALIKE_04",
+            "PATH_MODEL_LOOKALIKE_05",
+            "PATH_TRUE_BANK",
+            "PATH_TRUE_OPS",
+            "PATH_TRUE_WHISTLE_CONTRA"
+          ],
+          "decision_survives": true,
+          "surviving_independence": 0.3137,
+          "remaining_corroboration": 18
+        },
+        {
+          "ablated_root": "ROOT_SECONDARY_EVIDENCE_01",
+          "affected_paths": [
+            "PATH_VENDOR_LOOKALIKE_01"
+          ],
+          "surviving_paths": [
+            "PATH_VENDOR_LOOKALIKE_02",
+            "PATH_VENDOR_LOOKALIKE_03",
+            "PATH_VENDOR_LOOKALIKE_04",
+            "PATH_VENDOR_LOOKALIKE_05",
+            "PATH_VENDOR_LOOKALIKE_06",
+            "PATH_VENDOR_LOOKALIKE_07",
+            "PATH_VENDOR_LOOKALIKE_08",
+            "PATH_VENDOR_LOOKALIKE_09",
+            "PATH_VENDOR_LOOKALIKE_10",
+            "PATH_MODEL_LOOKALIKE_01",
+            "PATH_MODEL_LOOKALIKE_02",
+            "PATH_MODEL_LOOKALIKE_03",
+            "PATH_MODEL_LOOKALIKE_04",
+            "PATH_MODEL_LOOKALIKE_05",
+            "PATH_TRUE_FILING",
+            "PATH_TRUE_BANK",
+            "PATH_TRUE_OPS",
+            "PATH_TRUE_WHISTLE_CONTRA"
+          ],
+          "decision_survives": true,
+          "surviving_independence": 0.4052,
+          "remaining_corroboration": 18
+        },
+        {
+          "ablated_root": "ROOT_SECONDARY_EVIDENCE_02",
+          "affected_paths": [
+            "PATH_VENDOR_LOOKALIKE_02"
+          ],
+          "surviving_paths": [
+            "PATH_VENDOR_LOOKALIKE_01",
+            "PATH_VENDOR_LOOKALIKE_03",
+            "PATH_VENDOR_LOOKALIKE_04",
+            "PATH_VENDOR_LOOKALIKE_05",
+            "PATH_VENDOR_LOOKALIKE_06",
+            "PATH_VENDOR_LOOKALIKE_07",
+            "PATH_VENDOR_LOOKALIKE_08",
+            "PATH_VENDOR_LOOKALIKE_09",
+            "PATH_VENDOR_LOOKALIKE_10",
+            "PATH_MODEL_LOOKALIKE_01",
+            "PATH_MODEL_LOOKALIKE_02",
+            "PATH_MODEL_LOOKALIKE_03",
+            "PATH_MODEL_LOOKALIKE_04",
+            "PATH_MODEL_LOOKALIKE_05",
+            "PATH_TRUE_FILING",
+            "PATH_TRUE_BANK",
+            "PATH_TRUE_OPS",
+            "PATH_TRUE_WHISTLE_CONTRA"
+          ],
+          "decision_survives": true,
+          "surviving_independence": 0.4052,
+          "remaining_corroboration": 18
+        },
+        {
+          "ablated_root": "ROOT_SECONDARY_EVIDENCE_03",
+          "affected_paths": [
+            "PATH_VENDOR_LOOKALIKE_03"
+          ],
+          "surviving_paths": [
+            "PATH_VENDOR_LOOKALIKE_01",
+            "PATH_VENDOR_LOOKALIKE_02",
+            "PATH_VENDOR_LOOKALIKE_04",
+            "PATH_VENDOR_LOOKALIKE_05",
+            "PATH_VENDOR_LOOKALIKE_06",
+            "PATH_VENDOR_LOOKALIKE_07",
+            "PATH_VENDOR_LOOKALIKE_08",
+            "PATH_VENDOR_LOOKALIKE_09",
+            "PATH_VENDOR_LOOKALIKE_10",
+            "PATH_MODEL_LOOKALIKE_01",
+            "PATH_MODEL_LOOKALIKE_02",
+            "PATH_MODEL_LOOKALIKE_03",
+            "PATH_MODEL_LOOKALIKE_04",
+            "PATH_MODEL_LOOKALIKE_05",
+            "PATH_TRUE_FILING",
+            "PATH_TRUE_BANK",
+            "PATH_TRUE_OPS",
+            "PATH_TRUE_WHISTLE_CONTRA"
+          ],
+          "decision_survives": true,
+          "surviving_independence": 0.4052,
+          "remaining_corroboration": 18
+        },
+        {
+          "ablated_root": "ROOT_SECONDARY_EVIDENCE_04",
+          "affected_paths": [
+            "PATH_VENDOR_LOOKALIKE_04"
+          ],
+          "surviving_paths": [
+            "PATH_VENDOR_LOOKALIKE_01",
+            "PATH_VENDOR_LOOKALIKE_02",
+            "PATH_VENDOR_LOOKALIKE_03",
+            "PATH_VENDOR_LOOKALIKE_05",
+            "PATH_VENDOR_LOOKALIKE_06",
+            "PATH_VENDOR_LOOKALIKE_07",
+            "PATH_VENDOR_LOOKALIKE_08",
+            "PATH_VENDOR_LOOKALIKE_09",
+            "PATH_VENDOR_LOOKALIKE_10",
+            "PATH_MODEL_LOOKALIKE_01",
+            "PATH_MODEL_LOOKALIKE_02",
+            "PATH_MODEL_LOOKALIKE_03",
+            "PATH_MODEL_LOOKALIKE_04",
+            "PATH_MODEL_LOOKALIKE_05",
+            "PATH_TRUE_FILING",
+            "PATH_TRUE_BANK",
+            "PATH_TRUE_OPS",
+            "PATH_TRUE_WHISTLE_CONTRA"
+          ],
+          "decision_survives": true,
+          "surviving_independence": 0.4052,
+          "remaining_corroboration": 18
+        },
+        {
+          "ablated_root": "ROOT_SECONDARY_EVIDENCE_05",
+          "affected_paths": [
+            "PATH_VENDOR_LOOKALIKE_05"
+          ],
+          "surviving_paths": [
+            "PATH_VENDOR_LOOKALIKE_01",
+            "PATH_VENDOR_LOOKALIKE_02",
+            "PATH_VENDOR_LOOKALIKE_03",
+            "PATH_VENDOR_LOOKALIKE_04",
+            "PATH_VENDOR_LOOKALIKE_06",
+            "PATH_VENDOR_LOOKALIKE_07",
+            "PATH_VENDOR_LOOKALIKE_08",
+            "PATH_VENDOR_LOOKALIKE_09",
+            "PATH_VENDOR_LOOKALIKE_10",
+            "PATH_MODEL_LOOKALIKE_01",
+            "PATH_MODEL_LOOKALIKE_02",
+            "PATH_MODEL_LOOKALIKE_03",
+            "PATH_MODEL_LOOKALIKE_04",
+            "PATH_MODEL_LOOKALIKE_05",
+            "PATH_TRUE_FILING",
+            "PATH_TRUE_BANK",
+            "PATH_TRUE_OPS",
+            "PATH_TRUE_WHISTLE_CONTRA"
+          ],
+          "decision_survives": true,
+          "surviving_independence": 0.4052,
+          "remaining_corroboration": 18
+        },
+        {
+          "ablated_root": "ROOT_SECONDARY_EVIDENCE_06",
+          "affected_paths": [
+            "PATH_VENDOR_LOOKALIKE_06"
+          ],
+          "surviving_paths": [
+            "PATH_VENDOR_LOOKALIKE_01",
+            "PATH_VENDOR_LOOKALIKE_02",
+            "PATH_VENDOR_LOOKALIKE_03",
+            "PATH_VENDOR_LOOKALIKE_04",
+            "PATH_VENDOR_LOOKALIKE_05",
+            "PATH_VENDOR_LOOKALIKE_07",
+            "PATH_VENDOR_LOOKALIKE_08",
+            "PATH_VENDOR_LOOKALIKE_09",
+            "PATH_VENDOR_LOOKALIKE_10",
+            "PATH_MODEL_LOOKALIKE_01",
+            "PATH_MODEL_LOOKALIKE_02",
+            "PATH_MODEL_LOOKALIKE_03",
+            "PATH_MODEL_LOOKALIKE_04",
+            "PATH_MODEL_LOOKALIKE_05",
+            "PATH_TRUE_FILING",
+            "PATH_TRUE_BANK",
+            "PATH_TRUE_OPS",
+            "PATH_TRUE_WHISTLE_CONTRA"
+          ],
+          "decision_survives": true,
+          "surviving_independence": 0.4052,
+          "remaining_corroboration": 18
+        },
+        {
+          "ablated_root": "ROOT_SECONDARY_EVIDENCE_07",
+          "affected_paths": [
+            "PATH_VENDOR_LOOKALIKE_07"
+          ],
+          "surviving_paths": [
+            "PATH_VENDOR_LOOKALIKE_01",
+            "PATH_VENDOR_LOOKALIKE_02",
+            "PATH_VENDOR_LOOKALIKE_03",
+            "PATH_VENDOR_LOOKALIKE_04",
+            "PATH_VENDOR_LOOKALIKE_05",
+            "PATH_VENDOR_LOOKALIKE_06",
+            "PATH_VENDOR_LOOKALIKE_08",
+            "PATH_VENDOR_LOOKALIKE_09",
+            "PATH_VENDOR_LOOKALIKE_10",
+            "PATH_MODEL_LOOKALIKE_01",
+            "PATH_MODEL_LOOKALIKE_02",
+            "PATH_MODEL_LOOKALIKE_03",
+            "PATH_MODEL_LOOKALIKE_04",
+            "PATH_MODEL_LOOKALIKE_05",
+            "PATH_TRUE_FILING",
+            "PATH_TRUE_BANK",
+            "PATH_TRUE_OPS",
+            "PATH_TRUE_WHISTLE_CONTRA"
+          ],
+          "decision_survives": true,
+          "surviving_independence": 0.4052,
+          "remaining_corroboration": 18
+        },
+        {
+          "ablated_root": "ROOT_SECONDARY_EVIDENCE_08",
+          "affected_paths": [
+            "PATH_VENDOR_LOOKALIKE_08"
+          ],
+          "surviving_paths": [
+            "PATH_VENDOR_LOOKALIKE_01",
+            "PATH_VENDOR_LOOKALIKE_02",
+            "PATH_VENDOR_LOOKALIKE_03",
+            "PATH_VENDOR_LOOKALIKE_04",
+            "PATH_VENDOR_LOOKALIKE_05",
+            "PATH_VENDOR_LOOKALIKE_06",
+            "PATH_VENDOR_LOOKALIKE_07",
+            "PATH_VENDOR_LOOKALIKE_09",
+            "PATH_VENDOR_LOOKALIKE_10",
+            "PATH_MODEL_LOOKALIKE_01",
+            "PATH_MODEL_LOOKALIKE_02",
+            "PATH_MODEL_LOOKALIKE_03",
+            "PATH_MODEL_LOOKALIKE_04",
+            "PATH_MODEL_LOOKALIKE_05",
+            "PATH_TRUE_FILING",
+            "PATH_TRUE_BANK",
+            "PATH_TRUE_OPS",
+            "PATH_TRUE_WHISTLE_CONTRA"
+          ],
+          "decision_survives": true,
+          "surviving_independence": 0.4052,
+          "remaining_corroboration": 18
+        },
+        {
+          "ablated_root": "ROOT_SECONDARY_EVIDENCE_09",
+          "affected_paths": [
+            "PATH_VENDOR_LOOKALIKE_09"
+          ],
+          "surviving_paths": [
+            "PATH_VENDOR_LOOKALIKE_01",
+            "PATH_VENDOR_LOOKALIKE_02",
+            "PATH_VENDOR_LOOKALIKE_03",
+            "PATH_VENDOR_LOOKALIKE_04",
+            "PATH_VENDOR_LOOKALIKE_05",
+            "PATH_VENDOR_LOOKALIKE_06",
+            "PATH_VENDOR_LOOKALIKE_07",
+            "PATH_VENDOR_LOOKALIKE_08",
+            "PATH_VENDOR_LOOKALIKE_10",
+            "PATH_MODEL_LOOKALIKE_01",
+            "PATH_MODEL_LOOKALIKE_02",
+            "PATH_MODEL_LOOKALIKE_03",
+            "PATH_MODEL_LOOKALIKE_04",
+            "PATH_MODEL_LOOKALIKE_05",
+            "PATH_TRUE_FILING",
+            "PATH_TRUE_BANK",
+            "PATH_TRUE_OPS",
+            "PATH_TRUE_WHISTLE_CONTRA"
+          ],
+          "decision_survives": true,
+          "surviving_independence": 0.4052,
+          "remaining_corroboration": 18
+        },
+        {
+          "ablated_root": "ROOT_SECONDARY_EVIDENCE_10",
+          "affected_paths": [
+            "PATH_VENDOR_LOOKALIKE_10"
+          ],
+          "surviving_paths": [
+            "PATH_VENDOR_LOOKALIKE_01",
+            "PATH_VENDOR_LOOKALIKE_02",
+            "PATH_VENDOR_LOOKALIKE_03",
+            "PATH_VENDOR_LOOKALIKE_04",
+            "PATH_VENDOR_LOOKALIKE_05",
+            "PATH_VENDOR_LOOKALIKE_06",
+            "PATH_VENDOR_LOOKALIKE_07",
+            "PATH_VENDOR_LOOKALIKE_08",
+            "PATH_VENDOR_LOOKALIKE_09",
+            "PATH_MODEL_LOOKALIKE_01",
+            "PATH_MODEL_LOOKALIKE_02",
+            "PATH_MODEL_LOOKALIKE_03",
+            "PATH_MODEL_LOOKALIKE_04",
+            "PATH_MODEL_LOOKALIKE_05",
+            "PATH_TRUE_FILING",
+            "PATH_TRUE_BANK",
+            "PATH_TRUE_OPS",
+            "PATH_TRUE_WHISTLE_CONTRA"
+          ],
+          "decision_survives": true,
+          "surviving_independence": 0.4052,
+          "remaining_corroboration": 18
+        },
+        {
+          "ablated_root": "ROOT_SECONDARY_EVIDENCE_21",
+          "affected_paths": [
+            "PATH_MODEL_LOOKALIKE_01"
+          ],
+          "surviving_paths": [
+            "PATH_VENDOR_LOOKALIKE_01",
+            "PATH_VENDOR_LOOKALIKE_02",
+            "PATH_VENDOR_LOOKALIKE_03",
+            "PATH_VENDOR_LOOKALIKE_04",
+            "PATH_VENDOR_LOOKALIKE_05",
+            "PATH_VENDOR_LOOKALIKE_06",
+            "PATH_VENDOR_LOOKALIKE_07",
+            "PATH_VENDOR_LOOKALIKE_08",
+            "PATH_VENDOR_LOOKALIKE_09",
+            "PATH_VENDOR_LOOKALIKE_10",
+            "PATH_MODEL_LOOKALIKE_02",
+            "PATH_MODEL_LOOKALIKE_03",
+            "PATH_MODEL_LOOKALIKE_04",
+            "PATH_MODEL_LOOKALIKE_05",
+            "PATH_TRUE_FILING",
+            "PATH_TRUE_BANK",
+            "PATH_TRUE_OPS",
+            "PATH_TRUE_WHISTLE_CONTRA"
+          ],
+          "decision_survives": true,
+          "surviving_independence": 0.4052,
+          "remaining_corroboration": 18
+        },
+        {
+          "ablated_root": "ROOT_SECONDARY_EVIDENCE_22",
+          "affected_paths": [
+            "PATH_MODEL_LOOKALIKE_02"
+          ],
+          "surviving_paths": [
+            "PATH_VENDOR_LOOKALIKE_01",
+            "PATH_VENDOR_LOOKALIKE_02",
+            "PATH_VENDOR_LOOKALIKE_03",
+            "PATH_VENDOR_LOOKALIKE_04",
+            "PATH_VENDOR_LOOKALIKE_05",
+            "PATH_VENDOR_LOOKALIKE_06",
+            "PATH_VENDOR_LOOKALIKE_07",
+            "PATH_VENDOR_LOOKALIKE_08",
+            "PATH_VENDOR_LOOKALIKE_09",
+            "PATH_VENDOR_LOOKALIKE_10",
+            "PATH_MODEL_LOOKALIKE_01",
+            "PATH_MODEL_LOOKALIKE_03",
+            "PATH_MODEL_LOOKALIKE_04",
+            "PATH_MODEL_LOOKALIKE_05",
+            "PATH_TRUE_FILING",
+            "PATH_TRUE_BANK",
+            "PATH_TRUE_OPS",
+            "PATH_TRUE_WHISTLE_CONTRA"
+          ],
+          "decision_survives": true,
+          "surviving_independence": 0.4052,
+          "remaining_corroboration": 18
+        },
+        {
+          "ablated_root": "ROOT_SECONDARY_EVIDENCE_23",
+          "affected_paths": [
+            "PATH_MODEL_LOOKALIKE_03"
+          ],
+          "surviving_paths": [
+            "PATH_VENDOR_LOOKALIKE_01",
+            "PATH_VENDOR_LOOKALIKE_02",
+            "PATH_VENDOR_LOOKALIKE_03",
+            "PATH_VENDOR_LOOKALIKE_04",
+            "PATH_VENDOR_LOOKALIKE_05",
+            "PATH_VENDOR_LOOKALIKE_06",
+            "PATH_VENDOR_LOOKALIKE_07",
+            "PATH_VENDOR_LOOKALIKE_08",
+            "PATH_VENDOR_LOOKALIKE_09",
+            "PATH_VENDOR_LOOKALIKE_10",
+            "PATH_MODEL_LOOKALIKE_01",
+            "PATH_MODEL_LOOKALIKE_02",
+            "PATH_MODEL_LOOKALIKE_04",
+            "PATH_MODEL_LOOKALIKE_05",
+            "PATH_TRUE_FILING",
+            "PATH_TRUE_BANK",
+            "PATH_TRUE_OPS",
+            "PATH_TRUE_WHISTLE_CONTRA"
+          ],
+          "decision_survives": true,
+          "surviving_independence": 0.4052,
+          "remaining_corroboration": 18
+        },
+        {
+          "ablated_root": "ROOT_SECONDARY_EVIDENCE_24",
+          "affected_paths": [
+            "PATH_MODEL_LOOKALIKE_04"
+          ],
+          "surviving_paths": [
+            "PATH_VENDOR_LOOKALIKE_01",
+            "PATH_VENDOR_LOOKALIKE_02",
+            "PATH_VENDOR_LOOKALIKE_03",
+            "PATH_VENDOR_LOOKALIKE_04",
+            "PATH_VENDOR_LOOKALIKE_05",
+            "PATH_VENDOR_LOOKALIKE_06",
+            "PATH_VENDOR_LOOKALIKE_07",
+            "PATH_VENDOR_LOOKALIKE_08",
+            "PATH_VENDOR_LOOKALIKE_09",
+            "PATH_VENDOR_LOOKALIKE_10",
+            "PATH_MODEL_LOOKALIKE_01",
+            "PATH_MODEL_LOOKALIKE_02",
+            "PATH_MODEL_LOOKALIKE_03",
+            "PATH_MODEL_LOOKALIKE_05",
+            "PATH_TRUE_FILING",
+            "PATH_TRUE_BANK",
+            "PATH_TRUE_OPS",
+            "PATH_TRUE_WHISTLE_CONTRA"
+          ],
+          "decision_survives": true,
+          "surviving_independence": 0.4052,
+          "remaining_corroboration": 18
+        },
+        {
+          "ablated_root": "ROOT_SECONDARY_EVIDENCE_25",
+          "affected_paths": [
+            "PATH_MODEL_LOOKALIKE_05"
+          ],
+          "surviving_paths": [
+            "PATH_VENDOR_LOOKALIKE_01",
+            "PATH_VENDOR_LOOKALIKE_02",
+            "PATH_VENDOR_LOOKALIKE_03",
+            "PATH_VENDOR_LOOKALIKE_04",
+            "PATH_VENDOR_LOOKALIKE_05",
+            "PATH_VENDOR_LOOKALIKE_06",
+            "PATH_VENDOR_LOOKALIKE_07",
+            "PATH_VENDOR_LOOKALIKE_08",
+            "PATH_VENDOR_LOOKALIKE_09",
+            "PATH_VENDOR_LOOKALIKE_10",
+            "PATH_MODEL_LOOKALIKE_01",
+            "PATH_MODEL_LOOKALIKE_02",
+            "PATH_MODEL_LOOKALIKE_03",
+            "PATH_MODEL_LOOKALIKE_04",
+            "PATH_TRUE_FILING",
+            "PATH_TRUE_BANK",
+            "PATH_TRUE_OPS",
+            "PATH_TRUE_WHISTLE_CONTRA"
+          ],
+          "decision_survives": true,
+          "surviving_independence": 0.4052,
+          "remaining_corroboration": 18
+        },
+        {
+          "ablated_root": "ROOT_SECONDARY_EVIDENCE_30",
+          "affected_paths": [
+            "PATH_TRUE_BANK"
+          ],
+          "surviving_paths": [
+            "PATH_VENDOR_LOOKALIKE_01",
+            "PATH_VENDOR_LOOKALIKE_02",
+            "PATH_VENDOR_LOOKALIKE_03",
+            "PATH_VENDOR_LOOKALIKE_04",
+            "PATH_VENDOR_LOOKALIKE_05",
+            "PATH_VENDOR_LOOKALIKE_06",
+            "PATH_VENDOR_LOOKALIKE_07",
+            "PATH_VENDOR_LOOKALIKE_08",
+            "PATH_VENDOR_LOOKALIKE_09",
+            "PATH_VENDOR_LOOKALIKE_10",
+            "PATH_MODEL_LOOKALIKE_01",
+            "PATH_MODEL_LOOKALIKE_02",
+            "PATH_MODEL_LOOKALIKE_03",
+            "PATH_MODEL_LOOKALIKE_04",
+            "PATH_MODEL_LOOKALIKE_05",
+            "PATH_TRUE_FILING",
+            "PATH_TRUE_OPS",
+            "PATH_TRUE_WHISTLE_CONTRA"
+          ],
+          "decision_survives": true,
+          "surviving_independence": 0.3137,
+          "remaining_corroboration": 18
+        },
+        {
+          "ablated_root": "ROOT_SECONDARY_EVIDENCE_31",
+          "affected_paths": [
+            "PATH_TRUE_OPS"
+          ],
+          "surviving_paths": [
+            "PATH_VENDOR_LOOKALIKE_01",
+            "PATH_VENDOR_LOOKALIKE_02",
+            "PATH_VENDOR_LOOKALIKE_03",
+            "PATH_VENDOR_LOOKALIKE_04",
+            "PATH_VENDOR_LOOKALIKE_05",
+            "PATH_VENDOR_LOOKALIKE_06",
+            "PATH_VENDOR_LOOKALIKE_07",
+            "PATH_VENDOR_LOOKALIKE_08",
+            "PATH_VENDOR_LOOKALIKE_09",
+            "PATH_VENDOR_LOOKALIKE_10",
+            "PATH_MODEL_LOOKALIKE_01",
+            "PATH_MODEL_LOOKALIKE_02",
+            "PATH_MODEL_LOOKALIKE_03",
+            "PATH_MODEL_LOOKALIKE_04",
+            "PATH_MODEL_LOOKALIKE_05",
+            "PATH_TRUE_FILING",
+            "PATH_TRUE_BANK",
+            "PATH_TRUE_WHISTLE_CONTRA"
+          ],
+          "decision_survives": true,
+          "surviving_independence": 0.3137,
+          "remaining_corroboration": 18
+        },
+        {
+          "ablated_root": "ROOT_SECONDARY_EVIDENCE_32",
+          "affected_paths": [
+            "PATH_TRUE_OPS"
+          ],
+          "surviving_paths": [
+            "PATH_VENDOR_LOOKALIKE_01",
+            "PATH_VENDOR_LOOKALIKE_02",
+            "PATH_VENDOR_LOOKALIKE_03",
+            "PATH_VENDOR_LOOKALIKE_04",
+            "PATH_VENDOR_LOOKALIKE_05",
+            "PATH_VENDOR_LOOKALIKE_06",
+            "PATH_VENDOR_LOOKALIKE_07",
+            "PATH_VENDOR_LOOKALIKE_08",
+            "PATH_VENDOR_LOOKALIKE_09",
+            "PATH_VENDOR_LOOKALIKE_10",
+            "PATH_MODEL_LOOKALIKE_01",
+            "PATH_MODEL_LOOKALIKE_02",
+            "PATH_MODEL_LOOKALIKE_03",
+            "PATH_MODEL_LOOKALIKE_04",
+            "PATH_MODEL_LOOKALIKE_05",
+            "PATH_TRUE_FILING",
+            "PATH_TRUE_BANK",
+            "PATH_TRUE_WHISTLE_CONTRA"
+          ],
+          "decision_survives": true,
+          "surviving_independence": 0.3137,
+          "remaining_corroboration": 18
+        },
+        {
+          "ablated_root": "ROOT_SECONDARY_EVIDENCE_33",
+          "affected_paths": [
+            "PATH_TRUE_WHISTLE_CONTRA"
+          ],
+          "surviving_paths": [
+            "PATH_VENDOR_LOOKALIKE_01",
+            "PATH_VENDOR_LOOKALIKE_02",
+            "PATH_VENDOR_LOOKALIKE_03",
+            "PATH_VENDOR_LOOKALIKE_04",
+            "PATH_VENDOR_LOOKALIKE_05",
+            "PATH_VENDOR_LOOKALIKE_06",
+            "PATH_VENDOR_LOOKALIKE_07",
+            "PATH_VENDOR_LOOKALIKE_08",
+            "PATH_VENDOR_LOOKALIKE_09",
+            "PATH_VENDOR_LOOKALIKE_10",
+            "PATH_MODEL_LOOKALIKE_01",
+            "PATH_MODEL_LOOKALIKE_02",
+            "PATH_MODEL_LOOKALIKE_03",
+            "PATH_MODEL_LOOKALIKE_04",
+            "PATH_MODEL_LOOKALIKE_05",
+            "PATH_TRUE_FILING",
+            "PATH_TRUE_BANK",
+            "PATH_TRUE_OPS"
+          ],
+          "decision_survives": true,
+          "surviving_independence": 0.3137,
+          "remaining_corroboration": 18
+        },
+        {
+          "ablated_root": "ROOT_SECONDARY_EVIDENCE_34",
+          "affected_paths": [
+            "PATH_TRUE_WHISTLE_CONTRA"
+          ],
+          "surviving_paths": [
+            "PATH_VENDOR_LOOKALIKE_01",
+            "PATH_VENDOR_LOOKALIKE_02",
+            "PATH_VENDOR_LOOKALIKE_03",
+            "PATH_VENDOR_LOOKALIKE_04",
+            "PATH_VENDOR_LOOKALIKE_05",
+            "PATH_VENDOR_LOOKALIKE_06",
+            "PATH_VENDOR_LOOKALIKE_07",
+            "PATH_VENDOR_LOOKALIKE_08",
+            "PATH_VENDOR_LOOKALIKE_09",
+            "PATH_VENDOR_LOOKALIKE_10",
+            "PATH_MODEL_LOOKALIKE_01",
+            "PATH_MODEL_LOOKALIKE_02",
+            "PATH_MODEL_LOOKALIKE_03",
+            "PATH_MODEL_LOOKALIKE_04",
+            "PATH_MODEL_LOOKALIKE_05",
+            "PATH_TRUE_FILING",
+            "PATH_TRUE_BANK",
+            "PATH_TRUE_OPS"
+          ],
+          "decision_survives": true,
+          "surviving_independence": 0.3137,
+          "remaining_corroboration": 18
+        },
+        {
+          "ablated_root": "ROOT_SUPPLY_CHAIN_AUDIT",
+          "affected_paths": [
+            "PATH_TRUE_OPS"
+          ],
+          "surviving_paths": [
+            "PATH_VENDOR_LOOKALIKE_01",
+            "PATH_VENDOR_LOOKALIKE_02",
+            "PATH_VENDOR_LOOKALIKE_03",
+            "PATH_VENDOR_LOOKALIKE_04",
+            "PATH_VENDOR_LOOKALIKE_05",
+            "PATH_VENDOR_LOOKALIKE_06",
+            "PATH_VENDOR_LOOKALIKE_07",
+            "PATH_VENDOR_LOOKALIKE_08",
+            "PATH_VENDOR_LOOKALIKE_09",
+            "PATH_VENDOR_LOOKALIKE_10",
+            "PATH_MODEL_LOOKALIKE_01",
+            "PATH_MODEL_LOOKALIKE_02",
+            "PATH_MODEL_LOOKALIKE_03",
+            "PATH_MODEL_LOOKALIKE_04",
+            "PATH_MODEL_LOOKALIKE_05",
+            "PATH_TRUE_FILING",
+            "PATH_TRUE_BANK",
+            "PATH_TRUE_WHISTLE_CONTRA"
+          ],
+          "decision_survives": true,
+          "surviving_independence": 0.3137,
+          "remaining_corroboration": 18
+        },
+        {
+          "ablated_root": "ROOT_VENDOR_MODEL_CM_7",
+          "affected_paths": [
+            "PATH_VENDOR_LOOKALIKE_01",
+            "PATH_VENDOR_LOOKALIKE_02",
+            "PATH_VENDOR_LOOKALIKE_03",
+            "PATH_VENDOR_LOOKALIKE_04",
+            "PATH_VENDOR_LOOKALIKE_05",
+            "PATH_VENDOR_LOOKALIKE_06",
+            "PATH_VENDOR_LOOKALIKE_07",
+            "PATH_VENDOR_LOOKALIKE_08",
+            "PATH_VENDOR_LOOKALIKE_09",
+            "PATH_VENDOR_LOOKALIKE_10",
+            "PATH_MODEL_LOOKALIKE_01",
+            "PATH_MODEL_LOOKALIKE_02",
+            "PATH_MODEL_LOOKALIKE_03",
+            "PATH_MODEL_LOOKALIKE_04",
+            "PATH_MODEL_LOOKALIKE_05"
+          ],
+          "surviving_paths": [
+            "PATH_TRUE_FILING",
+            "PATH_TRUE_BANK",
+            "PATH_TRUE_OPS",
+            "PATH_TRUE_WHISTLE_CONTRA"
+          ],
+          "decision_survives": true,
+          "surviving_independence": 1.0,
+          "remaining_corroboration": 4
+        },
+        {
+          "ablated_root": "ROOT_VENDOR_PRICING_FEED_X",
+          "affected_paths": [
+            "PATH_VENDOR_LOOKALIKE_01",
+            "PATH_VENDOR_LOOKALIKE_02",
+            "PATH_VENDOR_LOOKALIKE_03",
+            "PATH_VENDOR_LOOKALIKE_04",
+            "PATH_VENDOR_LOOKALIKE_05",
+            "PATH_VENDOR_LOOKALIKE_06",
+            "PATH_VENDOR_LOOKALIKE_07",
+            "PATH_VENDOR_LOOKALIKE_08",
+            "PATH_VENDOR_LOOKALIKE_09",
+            "PATH_VENDOR_LOOKALIKE_10",
+            "PATH_MODEL_LOOKALIKE_01",
+            "PATH_MODEL_LOOKALIKE_02",
+            "PATH_MODEL_LOOKALIKE_03",
+            "PATH_MODEL_LOOKALIKE_04",
+            "PATH_MODEL_LOOKALIKE_05"
+          ],
+          "surviving_paths": [
+            "PATH_TRUE_FILING",
+            "PATH_TRUE_BANK",
+            "PATH_TRUE_OPS",
+            "PATH_TRUE_WHISTLE_CONTRA"
+          ],
+          "decision_survives": true,
+          "surviving_independence": 1.0,
+          "remaining_corroboration": 4
+        }
+      ],
+      "min_survivors_after_ablation": 4,
+      "all_decisions_survive_ablation": true,
+      "false_plurality_detected": true,
+      "verdict": "FAIL",
+      "verdict_reason": "False plurality detected: paths share hidden common root(s)"
+    },
+    "ablation_vendor_feed": {
+      "ablated_root": "ROOT_VENDOR_PRICING_FEED_X",
+      "affected_paths": [
+        "PATH_VENDOR_LOOKALIKE_01",
+        "PATH_VENDOR_LOOKALIKE_02",
+        "PATH_VENDOR_LOOKALIKE_03",
+        "PATH_VENDOR_LOOKALIKE_04",
+        "PATH_VENDOR_LOOKALIKE_05",
+        "PATH_VENDOR_LOOKALIKE_06",
+        "PATH_VENDOR_LOOKALIKE_07",
+        "PATH_VENDOR_LOOKALIKE_08",
+        "PATH_VENDOR_LOOKALIKE_09",
+        "PATH_VENDOR_LOOKALIKE_10",
+        "PATH_MODEL_LOOKALIKE_01",
+        "PATH_MODEL_LOOKALIKE_02",
+        "PATH_MODEL_LOOKALIKE_03",
+        "PATH_MODEL_LOOKALIKE_04",
+        "PATH_MODEL_LOOKALIKE_05"
+      ],
+      "surviving_paths": [
+        "PATH_TRUE_FILING",
+        "PATH_TRUE_BANK",
+        "PATH_TRUE_OPS",
+        "PATH_TRUE_WHISTLE_CONTRA"
+      ],
+      "decision_survives": true,
+      "surviving_independence": 1.0,
+      "remaining_corroboration": 4
+    },
+    "ablation_vendor_model": {
+      "ablated_root": "ROOT_VENDOR_MODEL_CM_7",
+      "affected_paths": [
+        "PATH_VENDOR_LOOKALIKE_01",
+        "PATH_VENDOR_LOOKALIKE_02",
+        "PATH_VENDOR_LOOKALIKE_03",
+        "PATH_VENDOR_LOOKALIKE_04",
+        "PATH_VENDOR_LOOKALIKE_05",
+        "PATH_VENDOR_LOOKALIKE_06",
+        "PATH_VENDOR_LOOKALIKE_07",
+        "PATH_VENDOR_LOOKALIKE_08",
+        "PATH_VENDOR_LOOKALIKE_09",
+        "PATH_VENDOR_LOOKALIKE_10",
+        "PATH_MODEL_LOOKALIKE_01",
+        "PATH_MODEL_LOOKALIKE_02",
+        "PATH_MODEL_LOOKALIKE_03",
+        "PATH_MODEL_LOOKALIKE_04",
+        "PATH_MODEL_LOOKALIKE_05"
+      ],
+      "surviving_paths": [
+        "PATH_TRUE_FILING",
+        "PATH_TRUE_BANK",
+        "PATH_TRUE_OPS",
+        "PATH_TRUE_WHISTLE_CONTRA"
+      ],
+      "decision_survives": true,
+      "surviving_independence": 1.0,
+      "remaining_corroboration": 4
+    }
+  },
+  "human_baseline": {
+    "method": "committee_count_of_agreeing_memos",
+    "apparent_corroboration_count": 16,
+    "humans_treat_vendor_feed_paths_as_independent": true,
+    "humans_treat_same_model_runs_as_independent": true,
+    "hidden_shared_roots_found_by_humans_pre_meeting": 0,
+    "rootfall_hidden_shared_roots": 2,
+    "typical_failure_mode": "Plurality of memos is counted as independence; shared terminal feeds and identical vendor models are not ablated."
+  },
+  "what_rootfall_revealed": "ROOTFALL flags false plurality: ablating ROOT_VENDOR_PRICING_FEED_X collapses 15 paths; ablating ROOT_VENDOR_MODEL_CM_7 collapses 15 paths. Humans counting '16 agreeing memos' miss this.",
+  "pass": true
+}

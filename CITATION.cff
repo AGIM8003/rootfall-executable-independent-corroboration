@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "Please cite this independent research publication using the metadata below."
+title: "ROOTFALL: Executable Independent-Corroboration Runtime for AI Decisions Under Counterfactual Root Ablation"
+type: software
+authors:
+  - family-names: "Haxhijaha"
+    given-names: "Agim"
+    orcid: "https://orcid.org/0009-0002-3234-7765"
+    affiliation: "Independent Researcher"
+    email: "agim@vertogroup.ai"
+version: "2.3.0"
+date-released: "2026-07-16"
+license: "CC-BY-NC-ND-4.0"
+url: "https://github.com/AGIM8003/rootfall-executable-independent-corroboration"
+abstract: >-
+  High-stakes decisions often treat multiple agreeing analyses as independent corroboration when they secretly share vendor feeds or identical models — false plurality. We propose ROOTFALL: root-ablation testing, independence scoring, and certificates that FAIL when hidden shared roots collapse corroboration. This Public Research Edition (v2.3.0) packages an importable research library (from rootfall import ROOTFALLEngine), Reality Gate and benchmark PASS evidence, mutation testing at or above 90 percent, an alternative implementation with replication evidence, a credit-committee false-plurality scenario with nineteen paths, stress tests to 1,000 paths and 500 roots, EU AI Act Articles 13 and 14 transparency mapping, deployment manifests, competitive positioning against SHAP, LIME, and institutional committee practice, and an honest gap register. ROOTFALL does not replace regulated credit models or claim production GRC integration. Independence thresholds remain heuristic pending calibration on labeled corpora. This independent technical blueprint does not claim peer review, independent human replication, patentability, or legal compliance opinion. It is released for evaluation, citation, and attempted falsification of the false-plurality detection claim. Evidence artifacts in this package include Reality Gate results, benchmarks, mutation scores, real-world scenario JSON, stress-scale timings, deployment manifests, and an importable stdlib-only research library with quickstart and integration tests. Readers should treat all claims as blueprint-grade until independently replicated.
+keywords:
+  - "independent-corroboration"
+  - "false-plurality"
+  - "root-ablation"
+  - "counterfactual-evidence"
+  - "ai-execution-control"
+  - "provenance-adjacency"
+  - "action-bound-certificates"
+  - "fail-closed-gateway"
+  - "evidence-independence"
+  - "ai-governance"

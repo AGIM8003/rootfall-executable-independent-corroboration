@@ -1,0 +1,93 @@
+{
+  "framework": "ROOTFALL",
+  "author": "Agim Haxhijaha",
+  "orcid": "0009-0002-3234-7765",
+  "timestamp_utc": "2026-07-16T17:56:49.493264+00:00",
+  "mutations_total": 10,
+  "mutations_detected": 10,
+  "mutation_score": 1.0,
+  "pass_threshold": 0.9,
+  "mutations": [
+    {
+      "name": "skip_fp_check",
+      "detected": true,
+      "caught_by": "fail_fp_true",
+      "failed_tests": [
+        "fail_fp_true"
+      ]
+    },
+    {
+      "name": "always_pass_verdict",
+      "detected": true,
+      "caught_by": "fail_verdict",
+      "failed_tests": [
+        "fail_verdict"
+      ]
+    },
+    {
+      "name": "ablate_noop",
+      "detected": true,
+      "caught_by": "ablate_S_collapses",
+      "failed_tests": [
+        "ablate_S_collapses",
+        "ablate_R1_leaves_2"
+      ]
+    },
+    {
+      "name": "indep_always_1",
+      "detected": true,
+      "caught_by": "fail_indep_low",
+      "failed_tests": [
+        "fail_indep_low"
+      ]
+    },
+    {
+      "name": "fp_inverted",
+      "detected": true,
+      "caught_by": "fail_fp_true",
+      "failed_tests": [
+        "fail_fp_true",
+        "pass_fp_false"
+      ]
+    },
+    {
+      "name": "ablate_deletes_all",
+      "detected": true,
+      "caught_by": "ablate_R1_leaves_2",
+      "failed_tests": [
+        "ablate_R1_leaves_2"
+      ]
+    },
+    {
+      "name": "verdict_ignore_fp",
+      "detected": true,
+      "caught_by": "fail_verdict",
+      "failed_tests": [
+        "fail_verdict"
+      ]
+    },
+    {
+      "name": "empty_gens_crash",
+      "detected": true,
+      "caught_by": "exc:object of type 'NoneType' has no len()"
+    },
+    {
+      "name": "swap_ablate_meaning",
+      "detected": true,
+      "caught_by": "ablate_S_collapses",
+      "failed_tests": [
+        "ablate_S_collapses",
+        "ablate_R1_leaves_2"
+      ]
+    },
+    {
+      "name": "early_pass",
+      "detected": true,
+      "caught_by": "fail_verdict",
+      "failed_tests": [
+        "fail_verdict"
+      ]
+    }
+  ],
+  "suite_pass": true
+}
