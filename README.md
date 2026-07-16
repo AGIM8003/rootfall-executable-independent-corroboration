@@ -41,7 +41,7 @@ See `poc/REPRODUCE.md` for the complete evidence harness.
 
 Use `CITATION.cff`. After Zenodo assignment:
 
-> Haxhijaha, A. (2026). ROOTFALL: Executable Independent-Corroboration Runtime for AI Decisions Under Counterfactual Root Ablation (v2.3.0). Zenodo. https://doi.org/10.5281/zenodo.XXXXXXXX
+> Haxhijaha, A. (2026). ROOTFALL: Executable Independent-Corroboration Runtime for AI Decisions Under Counterfactual Root Ablation (v2.3.0). Zenodo. https://doi.org/10.5281/zenodo.21401975
 
 ## Contact / commercial licensing
 
